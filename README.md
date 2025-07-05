@@ -573,16 +573,39 @@ Untuk menerapkan pagination, silakan buka kembali Controller bernama Artikel, la
 
 ```
 public function admin_index()
-{
-    $title = 'Daftar Artikel';
-    $model = new ArtikelModel();
-    $data = [
-        'title' => $title,
-        'artikel' => $model->paginate(10), #data dibatasi 10 record per halaman
-        'pager' => $model->pager,
-    ];
-    return view('artikel/admin_index', $data);
-}
+    {
+        $title = 'Daftar Artikel';
+        $model = new ArtikelModel();
+        $kategoriModel = new KategoriModel();
+
+        // Ambil keyword pencarian & filter kategori
+        $q = $this->request->getGet('q') ?? '';
+        $kategori_id = $this->request->getGet('kategori_id') ?? '';
+
+        // Bangun query
+        $builder = $model
+            ->select('artikel.*, kategori.nama_kategori')
+            ->join('kategori', 'kategori.id_kategori = artikel.id_kategori', 'left');
+
+        if (!empty($q)) {
+            $builder->like('artikel.judul', $q);
+        }
+
+        if (!empty($kategori_id)) {
+            $builder->where('artikel.id_kategori', $kategori_id);
+        }
+
+        $data = [
+            'title' => $title,
+            'artikel' => $builder->paginate(10),
+            'pager' => $model->pager,
+            'q' => $q,
+            'kategori_id' => $kategori_id,
+            'kategori' => $kategoriModel->findAll(),
+        ];
+
+        return view('artikel/admin_index', $data);
+    }
 ```
 
 Kemudian buka file views/artikel/admin_index.php dan tambahkan kode berikut dibawah deklarasi tabel data.
@@ -593,7 +616,7 @@ Kemudian buka file views/artikel/admin_index.php dan tambahkan kode berikut diba
 
 Selanjutnya buka kembali menu daftar artikel, tambahkan data lagi untuk melihat hasilnya.
 
-![pagination](https://github.com/user-attachments/assets/5834d12e-026e-42c8-a9bf-7fff1c4ce240)
+![{71C9B2A5-D2A2-47D0-BFFA-56705F8D09A8}](https://github.com/user-attachments/assets/9b26c7b4-ea7d-486f-8a82-331711fce193)
 
 # 2. Membuat Pencarian
 Pencarian data digunakan untuk memfilter data.
