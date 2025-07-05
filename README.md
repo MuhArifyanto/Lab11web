@@ -540,7 +540,7 @@ Selanjutnya buka file app/Config/Filters.php tambahkan kode berikut:
 'auth' => App\Filters\Auth::class
 ```
 
-![login](https://github.com/user-attachments/assets/c7833c84-7f87-429d-b30e-92e3b938f551)
+![{1637ED09-62F8-468C-A85B-8BDC32882245}](https://github.com/user-attachments/assets/e896cfdc-c023-43c8-a1a6-c1a101f31dba)
 
 
 Selanjutnya buka file app/Config/Routes.php dan sesuaikan kodenya.
@@ -548,7 +548,7 @@ Selanjutnya buka file app/Config/Routes.php dan sesuaikan kodenya.
 # 7. Percobaan Akses Menu Admin
 Buka url dengan alamat http://localhost:8080/admin/artikel ketika alamat tersebut diakses maka, akan dimuculkan halaman login.
 
-![auth](https://github.com/user-attachments/assets/eed96cbe-3714-4b78-b4e8-3547f45f6fe3)
+![login](https://github.com/user-attachments/assets/b607ec83-afdd-488a-aa95-37f14e82d350)
 
 # 8. Fungsi Logout
 Tambahkan method logout pada Controller User seperti berikut:
@@ -657,7 +657,7 @@ Dan pada link pager ubah seperti berikut.
 # 3. Uji Coba Pagination dan Pencarian
 Buka kembali halaman admin artikel, lalu masukkan kata kunci tertentu pada kolom pencarian untuk memastikan fitur pencarian berfungsi dengan baik.
 
-![search](https://github.com/user-attachments/assets/c6edb296-d6dc-435d-9e74-2d67ad122b07)
+![{2BBD861B-8D2A-4D2E-AFFA-F3099CC65722}](https://github.com/user-attachments/assets/18e4477f-2ed0-46ad-ba97-1f977d578bbe)
 
 # Praktikum 6: Upload File Gambar
 
@@ -713,8 +713,7 @@ Lakukan percobaan untuk memastikan proses unggah gambar berjalan dengan baik.
 
 Akses menu tambah artikel dan uji coba upload gambar.
 
-![add file](https://github.com/user-attachments/assets/ee0c3d9b-25d6-4315-8290-a4e3023f4963)
-
+![{20398470-0BFA-4B08-800C-1FACF6F84315}](https://github.com/user-attachments/assets/b9976821-d69b-4724-81fd-c883ea3c0c96)
 
 # LAPORAN PRAKTIKUM 
 
