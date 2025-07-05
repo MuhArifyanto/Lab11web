@@ -1,10 +1,9 @@
 # PRAKTIKUM 4-6
 
 ## Profil
-| Nama | Kelas | NIM | Mata Kuliah | Dosen |
-|------|-------|-----|-------------|-------|
-| Muhammad Arif Mulyanto   |  TI.23.A.5     | 312310359  |    Pemograman web 2         |  Agung Nugroho, S.Kom., M.Kom.     |
-
+| Nama | Kelas | NIM | 
+|------|-------|-----|
+| Muhammad Arif Mulyanto   |  TI.23.A.5     |
 # Praktikum 4: Framework Lanjutan (Modul Login)
 
 # Langkah-langkah Praktikum
