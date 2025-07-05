@@ -500,7 +500,7 @@ php spark db:seed UserSeeder
 ```
 
 # uji coba login
-![login](https://github.com/user-attachments/assets/74694d3b-f0a3-4d12-af49-cb97893bf99f)
+![login](https://github.com/user-attachments/assets/2a2a6a83-5640-47ab-9faa-84ae96c6218f)
 
 # 6. Menambahkan Auth Filter
 Selanjutnya membuat filer untuk halaman admin. Buat file baru dengan nama Auth.php pada direktori app/Filters.
