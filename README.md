@@ -540,7 +540,7 @@ Selanjutnya buka file app/Config/Filters.php tambahkan kode berikut:
 'auth' => App\Filters\Auth::class
 ```
 
-![{71E254F1-C072-4450-96D7-D94FFBCB0BE4}](https://github.com/user-attachments/assets/a366f888-faee-4c25-8a05-e6a665d95603)
+![login](https://github.com/user-attachments/assets/c7833c84-7f87-429d-b30e-92e3b938f551)
 
 
 Selanjutnya buka file app/Config/Routes.php dan sesuaikan kodenya.
